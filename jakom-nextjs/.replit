@@ -1,0 +1,9 @@
+run = "cd jakom-nextjs && npm run dev"
+language = "nodejs"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "cd jakom-nextjs && npm run build && npm run start"]
+deploymentTarget = "cloudrun"
