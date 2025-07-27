@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { LucideIcon } from 'lucide-react'
+// Import LucideIcon AND LucideProps
+import { LucideIcon, LucideProps } from 'lucide-react'
 
 interface ServiceCardProps {
-  icon: LucideIcon;
+  // Change the type of icon to be a React ComponentType that accepts LucideProps
+  icon: React.ComponentType<LucideProps>;
   title: string;
   description: string;
   delay: number;
